@@ -1,6 +1,8 @@
 # walltime
 Misusing a raspberry pi and LCD display as a clock.
 
+![Screenshot](walltime.png)
+
 ## Instructions
 * Install base Raspian on a Raspberry Pi
 * Change pi's password to something sensible
