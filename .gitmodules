@@ -1,0 +1,3 @@
+[submodule "DSEG"]
+	path = DSEG
+	url = git@github.com:keshikan/DSEG.git
