@@ -6,13 +6,29 @@
 # as published by Sam Hocevar. See the COPYING file for more details.
 
 import tkinter as tk
+from datetime import datetime
 
 root = tk.Tk()
 root.attributes("-fullscreen", True)
 
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 
-t = tk.Label(root, text="Hello, Friday!")
-t.pack()
+
+def everysecond(root, daylabel, timelabel, datelabel):
+    now = datetime.now()
+    daylabel.configure(text=now.strftime("%A"))
+    timelabel.configure(text=now.strftime("%H:%M:%S"))
+    datelabel.configure(text=now.strftime("%Y-%m-%d"))
+    root.after(1000, everysecond, root, daylabel, timelabel, datelabel)
+
+
+daylabel = tk.Label(root, text="day")
+daylabel.pack()
+timelabel = tk.Label(root, text="time")
+timelabel.pack()
+datelabel = tk.Label(root, text="date")
+datelabel.pack()
+
+everysecond(root, daylabel, timelabel, datelabel)
 
 root.mainloop()
