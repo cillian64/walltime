@@ -9,5 +9,5 @@ Misusing a raspberry pi and LCD display as a clock.
 * `git clone https://github.com/cillian64/walltime.git`
 * `git submodule update --init`
 * `mkdir ~/.fonts; cp -r DSEG/fonts/DSEG7-Modern ~/.fonts/`
-* `sudo fc-cache -f -v`
+* `fc-cache -f -v`
 * `walltime/walltime.py`
