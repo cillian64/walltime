@@ -7,8 +7,7 @@ Misusing a raspberry pi and LCD display as a clock.
 * `sudo timedatectl set-timezone Europe/London`
 * `sudo timedatectl set-ntp true`
 * `git clone https://github.com/cillian64/walltime.git`
-* `git submodule init`
-* `git submodule update`
-* `cp -r DSEG/fonts/DSEG7-Modern .fonts/`
+* `git submodule update --init`
+* `mkdir ~/.fonts; cp -r DSEG/fonts/DSEG7-Modern ~/.fonts/`
 * `sudo fc-cache -f -v`
 * `walltime/walltime.py`
