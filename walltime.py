@@ -17,7 +17,7 @@ root.attributes("-fullscreen", True)
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 
 small_font = font.Font(family="Ubuntu Mono",
-                       size=-(h//5),
+                       size=-int(h/5.5),
                        weight="bold")
 big_font = font.Font(family="DSEG7 Modern",
                      size=-(h//3),
