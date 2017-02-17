@@ -32,12 +32,12 @@ def everysecond(root, daylabel, timelabel, datelabel):
     root.after(1000, everysecond, root, daylabel, timelabel, datelabel)
 
 
-daylabel = tk.Label(root, text="day", relief=tk.RIDGE, font=small_font)
-daylabel.grid(row=0, column=0)
-timelabel = tk.Label(root, text="time", relief=tk.RIDGE, font=big_font)
-timelabel.grid(row=1, column=0)
-datelabel = tk.Label(root, text="date", relief=tk.RIDGE, font=small_font)
-datelabel.grid(row=2, column=0)
+daylabel = tk.Label(root, text="day", font=small_font)
+daylabel.pack()
+timelabel = tk.Label(root, text="time", font=big_font)
+timelabel.pack(ipady=int((h - h//3 - 2*int(h/5.5))/2))
+datelabel = tk.Label(root, text="date", font=small_font)
+datelabel.pack()
 
 everysecond(root, daylabel, timelabel, datelabel)
 
